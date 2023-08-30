@@ -1,6 +1,6 @@
-import { NextFunction, Request, Response } from 'express';
+import { Request, Response } from 'express';
 import { ApiError } from '../errors/ApiError.js';
-const ErrorHandler = (err: unknown, req: Request, res: Response, next: NextFunction) => {
+const ErrorHandler = (err: unknown, req: Request, res: Response) => {
   if (process.env.NODE_ENV === 'development') {
     console.log(err);
   }
